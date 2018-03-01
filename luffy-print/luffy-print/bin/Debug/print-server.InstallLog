@@ -1,0 +1,7 @@
+﻿正在卸载程序集“E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Debug\print-server.exe”。
+受影响的参数是:
+   assemblypath = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Debug\print-server.exe
+   logfile = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Debug\print-server.InstallLog
+正在移除 EventLog 源 PrintService。
+正在从系统中移除服务 PrintService...
+已成功地从系统中移除服务 PrintService。

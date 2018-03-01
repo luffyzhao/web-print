@@ -1,0 +1,70 @@
+﻿正在安装程序集“E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe”。
+受影响的参数是:
+   assemblypath = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe
+   logfile = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.InstallLog
+正在安装服务 PrintService...
+已成功安装服务 PrintService。
+正在日志 Application 中创建 EventLog 源 PrintService...
+查看日志文件的内容以获得 E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe 程序集的进度。
+该文件位于 E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.InstallLog。
+正在提交程序集“E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.InstallLog
+   assemblypath = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe
+正在安装程序集“E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe”。
+受影响的参数是:
+   assemblypath = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe
+   logfile = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.InstallLog
+正在安装服务 PrintService...
+已成功安装服务 PrintService。
+正在日志 Application 中创建 EventLog 源 PrintService...
+查看日志文件的内容以获得 E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe 程序集的进度。
+该文件位于 E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.InstallLog。
+正在提交程序集“E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.InstallLog
+   assemblypath = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe
+正在卸载程序集“E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe”。
+受影响的参数是:
+   assemblypath = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe
+   logfile = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.InstallLog
+正在移除 EventLog 源 PrintService。
+正在从系统中移除服务 PrintService...
+已成功地从系统中移除服务 PrintService。
+正在安装程序集“E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe”。
+受影响的参数是:
+   assemblypath = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe
+   logfile = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.InstallLog
+正在安装服务 PrintService...
+已成功安装服务 PrintService。
+正在日志 Application 中创建 EventLog 源 PrintService...
+查看日志文件的内容以获得 E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe 程序集的进度。
+该文件位于 E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.InstallLog。
+正在提交程序集“E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.InstallLog
+   assemblypath = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe
+正在卸载程序集“E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe”。
+受影响的参数是:
+   assemblypath = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe
+   logfile = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.InstallLog
+正在移除 EventLog 源 PrintService。
+正在从系统中移除服务 PrintService...
+已成功地从系统中移除服务 PrintService。
+正在安装程序集“E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe”。
+受影响的参数是:
+   assemblypath = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe
+   logfile = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.InstallLog
+正在安装服务 PrintService...
+已成功安装服务 PrintService。
+正在日志 Application 中创建 EventLog 源 PrintService...
+查看日志文件的内容以获得 E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe 程序集的进度。
+该文件位于 E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.InstallLog。
+正在提交程序集“E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.InstallLog
+   assemblypath = E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe
