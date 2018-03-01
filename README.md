@@ -32,8 +32,9 @@
 * http://127.0.0.1:3119/Api/Print
 
 #### 请求参数
+
 |参数名|是否必须|类型|说明|
-|:----||:----||:----||:----|
+|:----|:----|:----|:----|
 |mode|是|String|类型：base64 & file|
 |type|是|String|文件类型：pdf |
 |data|是|String|文件内容：如果mode是base64，那么转base64。如果mode是file转file路径|
