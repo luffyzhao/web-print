@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>pdf-html example</title>
+    <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
+    <script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
+    <script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./libs/base64.min.js"></script>
+
+    <script src="https://cdn.bootcss.com/qs/6.5.1/qs.min.js"></script>
+</head>
+<style type="text/css" media="screen">
+ html,body,#app,.layout,.ivu-layout{
+    height: 100%;
+ }   
+ .right-bnt{
+    margin: 15px;
+ }
+</style>
+<body>
+<div id="app">
+    <Layout>
+        <Content>
+            <Card>
+                <Row>
+                    <i-col span="20">
+                        <i-table :columns="columns" :data="data" id="print-example-html"></i-table>
+                    </i-col>
+                    <i-col span="4">
+                        <div class="right-bnt">
+                            <i-button type="primary" long @click="getPrinter">打印</i-button>
+                        </div>
+                    </i-col>
+                </Row>
+            </Card>
+        </Content>
+    </Layout>
+
+    <Modal v-model="printExampleHtmlModal" width="360" @on-ok="parintToHtml">
+        <i-form>
+            <Form-item label="选择打印机">
+                <i-select v-model="printer" style="width:200px">
+                    <i-option v-for="item in printers" :value="item" :key="item">{{ item }}</i-option>
+                </i-select>
+            </Form-item>
+        </i-form>
+    </Modal>
+</div>
+<script>
+    // 添加请求拦截器
+axios.interceptors.request.use((config) => {
+  config.data = Qs.stringify(config.data)
+  config.headers = {
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'Accept': 'application/json'
+  }
+  // console.log(config.data)
+  return config;
+}, (error) => {
+  return Promise.reject(error);
+});
+
+new Vue({
+    el: '#app',
+    data() {
+        return {
+            columns: [
+                {
+                    title: 'Name',
+                    key: 'name'
+                },
+                {
+                    title: 'Age',
+                    key: 'age'
+                },
+                {
+                    title: 'Address',
+                    key: 'address'
+                }
+            ],
+            data: [
+                {
+                    name: 'John Brown',
+                    age: 18,
+                    address: 'New York No. 1 Lake Park',
+                    date: '2016-10-03'
+                },
+                {
+                    name: 'Jim Green',
+                    age: 24,
+                    address: 'London No. 1 Lake Park',
+                    date: '2016-10-01'
+                },
+                {
+                    name: 'Joe Black',
+                    age: 30,
+                    address: 'Sydney No. 1 Lake Park',
+                    date: '2016-10-02'
+                },
+                {
+                    name: 'Jon Snow',
+                    age: 26,
+                    address: 'Ottawa No. 2 Lake Park',
+                    date: '2016-10-04'
+                }
+            ],
+            printer: '',
+            printers: [],
+            printExampleHtmlModal: false
+        }
+    },
+    methods: {
+        parintToHtml () {
+            if(this.printer !== ''){
+                var pdf = new jsPDF('', 'pt', 'a4');
+                pdf.addHTML(document.getElementById('print-example-html'), () => {
+                    let basePdf = "data:application/pdf;base64," + Base64.encode(pdf.output());
+
+                    axios.post('http://127.0.0.1:3119/Api/Print', {
+                        mode: "base64",
+                        type: "pdf",
+                        data: basePdf,
+                        printName: this.printer,
+                        rawKind: 9
+                    });
+                });   
+            }       
+        },
+
+        getPrinter () {
+            this.printExampleHtmlModal = true
+            axios.get('http://127.0.0.1:3119/Api/Index').then((e) => {
+                this.printers = e.data
+            });
+        }
+    }
+})
+  </script>
+</body>
+</html>

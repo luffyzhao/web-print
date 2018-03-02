@@ -65,14 +65,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="print-server.exe" size="19424">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="print-server.exe" size="20448">
       <assemblyIdentity name="print-server" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7P+gsZ5XTiyNrpptyizR4HeygEg9mi4JD4Vd5VDdXfo=</dsig:DigestValue>
+        <dsig:DigestValue>3uQGd6E8X3GYQi49mxFGD0UW4yzfUSiogKIgBnpXAkk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

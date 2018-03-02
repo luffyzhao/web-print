@@ -56,8 +56,7 @@ namespace Controller
             }
             catch(Exception e)
             {
-                FileHelper.successLog("打印失败 ："+ e.Message);
-                return "打印失败";
+                return "打印失败:" + e.Message;
             }
 
             return "打印成功";

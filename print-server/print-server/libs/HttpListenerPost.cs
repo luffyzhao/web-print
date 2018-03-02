@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace Libs
 {
@@ -146,6 +147,62 @@ namespace Libs
                             data.datas = result;
                             resultStream.Dispose();
                             CanMoveNext = false;
+                        }
+                    }
+                }
+                else if (request.Request.ContentType.Length > 20 && string.Compare(request.Request.ContentType.Substring(0, 33), "application/x-www-form-urlencoded", true) == 0)
+                {
+                    Stream body = request.Request.InputStream;
+                    Encoding encoding = request.Request.ContentEncoding;
+                    StreamReader reader = new StreamReader(body, encoding);
+                    string queryString = reader.ReadToEnd();
+
+                    if (!string.IsNullOrEmpty(queryString))
+                    {
+                        int count = queryString.Length;
+                        for (int i = 0; i < count; i++)
+                        {
+                            int startIndex = i;
+                            int index = -1;
+                            while (i < count)
+                            {
+                                char item = queryString[i];
+                                if (item == '=')
+                                {
+                                    if (index < 0)
+                                    {
+                                        index = i;
+                                    }
+                                }
+                                else if (item == '&')
+                                {
+                                    break;
+                                }
+                                i++;
+                            }
+                            string key = null;
+                            string value = null;
+                            if (index >= 0)
+                            {
+                                key = queryString.Substring(startIndex, index - startIndex);
+                                value = HttpUtility.UrlDecode(queryString.Substring(index + 1, (i - index) - 1));
+                            }
+                            else
+                            {
+                                key = queryString.Substring(startIndex, i - startIndex);
+                            }
+
+                            HttpListenerPostValue data = null;
+                            data = new HttpListenerPostValue();
+                            data.name = key;
+                            data.datas = Encoding.Default.GetBytes(value);
+
+                            if ((i == (count - 1)) && (queryString[i] == '&'))
+                            {
+                                data.datas = Encoding.Default.GetBytes(string.Empty);
+                            }
+
+                            HttpListenerPostValueList.Add(data);
                         }
                     }
                 }

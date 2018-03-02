@@ -28,11 +28,8 @@ namespace Core
         {
             try
             {
-                Console.WriteLine("检查操作系统:" + DateTime.Now.ToString());
-
                 if (!HttpListener.IsSupported)
                 {
-                    Console.WriteLine("无法在当前系统上运行服务。" + DateTime.Now.ToString());
                     return;
                 }
                 //需要监听的URL前缀
@@ -55,11 +52,10 @@ namespace Core
                 #endregion
                 //异步处理请求
                 listener.BeginGetContext(new AsyncCallback(GetContextCallBack), listener);
-                Console.WriteLine("{0}[{1}]", "服务启动成功。", svrName);
             }
-            catch (Exception e)
+            catch
             {
-                Console.WriteLine(e.Message);
+                // Console.WriteLine(e.Message);
             }
         }
 
@@ -70,44 +66,54 @@ namespace Core
             HttpListenerContext context = listener.EndGetContext(ar);
             //开始响应给客户端跨域授权
             HttpListenerResponse response = context.Response;
-
-
+            this.AddNoCacheHeaders(response);
+            this.AddCORSHeaders(response);
+            
             Dictionary<string, string> map = new Dictionary<string, string>();
+
+            string res = "";
 
             try
             {
                 Router router = new Router(context.Request.Url.LocalPath.ToString());
                  
-                Console.WriteLine("请求[" + DateTime.Now.ToString() +  "]: 控制器【" + router.getController() + "】. 方法【" + router.getAction() + "】" );
-
                 Type type = Assembly.GetExecutingAssembly().GetType("Controller." + router.getController());
 
                 object obj = Activator.CreateInstance(type);
 
                 MethodInfo method = type.GetMethod(router.getAction());
                 
-                object resObject = method.Invoke(obj, new object[] { context });
-                map.Add("code", "0");
-                map.Add("data", JsonConvert.SerializeObject(resObject));
-                map.Add("message", "成功");
+                res = JsonConvert.SerializeObject( method.Invoke(obj, new object[] { context }) );
             }
             catch (Exception ex)
             {
-                Console.WriteLine("错误：" + ex.Message);
-                map.Add("code", "28257257");
-                map.Add("message", "系统错误");
-                map.Add("error", "失败");
+                response.StatusCode = 500;
+                res = "错误：" + ex.Message;
             }
-            //返回类型为XML
-            response.ContentType = "text/json";
-            //为UTF-8编码
-            response.ContentEncoding = Encoding.UTF8;
+
+            
 
             using (StreamWriter sw = new StreamWriter(response.OutputStream))
             {
-                sw.Write(JsonConvert.SerializeObject(map));
+                sw.Write(Encoding.UTF8.GetString(Encoding.UTF8.GetBytes(res)));
                 sw.Flush();
             }
+        }
+
+        private void AddNoCacheHeaders(HttpListenerResponse response)
+        {
+            response.Headers.Add("Cache-Control", "no-cache, no-store, must-revalidate");
+            response.Headers.Add("Pragma", "no-cache");
+            response.Headers.Add("Expires", "0");
+            response.Headers.Add("Content-Type", "text/json;");
+            response.ContentEncoding = Encoding.UTF8;
+        }
+
+        private void AddCORSHeaders(HttpListenerResponse response)
+        {
+            response.Headers.Add("Access-Control-Allow-Origin", "*");
+            // response.Headers.Add("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+            response.Headers.Add("Access-Control-Allow-Methods", "GET,POST,PATCH,PUT,OPTIONS,HEAD,DELETE");
         }
 
 

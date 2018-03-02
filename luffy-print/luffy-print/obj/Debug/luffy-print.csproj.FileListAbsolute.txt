@@ -6,7 +6,6 @@ E:\websites\github\luffy-web-print\luffy-print\luffy-print\obj\Debug\luffy-print
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\obj\Debug\luffy-print.csproj.CoreCompileInputs.cache
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\obj\Debug\luffy-print.exe
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\obj\Debug\luffy-print.pdb
-E:\websites\github\luffy-web-print\luffy-print\luffy-print\obj\Debug\luffy-print.csprojResolveAssemblyReference.cache
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Debug\luffy-print.exe.config
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Debug\luffy-print.exe
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Debug\luffy-print.pdb
@@ -18,3 +17,4 @@ E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Debug\Newtonsoft.
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Debug\print-server.pdb
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Debug\print-server.exe.config
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Debug\Newtonsoft.Json.xml
+E:\websites\github\luffy-web-print\luffy-print\luffy-print\obj\Debug\luffy-print.csprojResolveAssemblyReference.cache

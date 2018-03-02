@@ -1,11 +1,15 @@
-E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe
+E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\luffy-print.exe.config
+E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\luffy-print.exe
+E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\luffy-print.pdb
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\Configuration.dll
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\Microsoft.CSharp.dll
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\O2S.Components.PDFRender4NET.dll
+E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\Newtonsoft.Json.dll
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.pdb
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\print-server.exe.config
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\Newtonsoft.Json.xml
+E:\websites\github\luffy-web-print\luffy-print\luffy-print\obj\Release\luffy-print.csprojResolveAssemblyReference.cache
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\obj\Release\Interop.MDACVer.dll
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\obj\Release\luffy-print.csproj.ResolveComReference.cache
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\obj\Release\luffy_print.Start.resources
@@ -14,7 +18,3 @@ E:\websites\github\luffy-web-print\luffy-print\luffy-print\obj\Release\luffy-pri
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\obj\Release\luffy-print.csproj.CoreCompileInputs.cache
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\obj\Release\luffy-print.exe
 E:\websites\github\luffy-web-print\luffy-print\luffy-print\obj\Release\luffy-print.pdb
-E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\luffy-print.exe.config
-E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\luffy-print.exe
-E:\websites\github\luffy-web-print\luffy-print\luffy-print\bin\Release\luffy-print.pdb
-E:\websites\github\luffy-web-print\luffy-print\luffy-print\obj\Release\luffy-print.csprojResolveAssemblyReference.cache
